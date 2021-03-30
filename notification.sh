@@ -19,7 +19,7 @@ mkdir /root/scripts
 echo -n "Please enter your mail address to get notifications: "
 read mail
 
-sudo cat <<EOF > /root/scripts/notify.sh
+sudo cat        <<EOF   >       /root/scripts/notify.sh
 #!/bin/sh
 rm -Rf /root/scripts/srvmessage.txt
 rm -Rf /root/scripts/catchmessage.txt
