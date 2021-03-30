@@ -6,6 +6,11 @@ This is a bash script to notification the end-user if some problem with Agoric S
 ## Requirements
 There is no special requirements. The bash script will install all necessary software and perform all configuration autoamtiacally
 
+You just need to install 'wget' tool to make possabillity run and install it:
+```
+apt install wget
+```
+
 ## Feauters
 - Send notfication if your service is down
 - Send notification if the "catching up" status is "true"
@@ -15,7 +20,7 @@ There is no special requirements. The bash script will install all necessary sof
 - Please note: if your mail service is not configured properly (you don't have SPF/DKIM/DMARC records) most probably the messages will be delivered to the spam directory
 - 
 ## Installation
-To configure notification please run this command:
+To configure notification tool please run:
 ```
-
+wget -O - https://github.com/AntonMashnin/agoric-mail-script/blob/main/notification.sh | bash
 ```
