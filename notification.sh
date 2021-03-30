@@ -9,6 +9,8 @@ if [ "$chkpackage" = "ok" ]; then
 else
 echo "postfix postfix/mailname string $srvname" | debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
+echo "\e[34m --------------------------------------\e[0m"
+echo "\e[32m The installation process of mailutils package is in progress!\e[0m"
 sudo apt install mailutils -y >> /dev/null
 
 echo "\e[32m The \"Mailutils\" package has been installed successfully\e[0m"
