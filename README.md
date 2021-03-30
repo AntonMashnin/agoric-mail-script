@@ -8,7 +8,7 @@ There is no special requirements. The bash script will install all necessary sof
 
 You just need to install 'wget' tool to make possabillity run and install it:
 ```
-apt install wget -y
+sudo apt install wget -y
 ```
 
 ## Feauters
@@ -22,5 +22,5 @@ apt install wget -y
 ## Installation
 To configure notification tool please run:
 ```
-wget -O - https://github.com/AntonMashnin/agoric-mail-script/blob/main/notification.sh | bash
+sudo wget -O - https://github.com/AntonMashnin/agoric-mail-script/blob/main/notification.sh | bash
 ```
