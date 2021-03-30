@@ -8,7 +8,7 @@ There is no special requirements. The bash script will install all necessary sof
 
 You just need to install 'wget' tool to make possabillity run and install it:
 ```
-apt install wget
+apt install wget -y
 ```
 
 ## Feauters
