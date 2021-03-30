@@ -53,10 +53,3 @@ echo "\e[31m# Please note! If your email server is not configured properly!  #\e
 echo "\e[31m# e.g. You don't have SPF/DKIM/DMARC records. Most probably your #\e[0m"
 echo "\e[31m# Most probably your message will get to "SPAM"                      #\e[0m"
 echo "\e[31m#----------------------------------------------------------------#\e[0m"
-
-
-
-
-
-
-
