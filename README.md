@@ -22,5 +22,5 @@ sudo apt install wget -y
 ## Installation
 To configure notification tool please run:
 ```
-sudo wget -O - https://github.com/AntonMashnin/agoric-mail-script/blob/main/notification.sh | bash
+sudo wget -O - https://raw.githubusercontent.com/AntonMashnin/agoric-mail-script/main/notification.sh | bash
 ```
