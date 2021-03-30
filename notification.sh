@@ -5,7 +5,6 @@ srvname=`uname -n`;
 
 if [ "$chkpackage" = "ok" ]; then
 	echo "\e[32m The \"Mailutils\" package has already installed\e[0m"
-	echo "\e[32m Skip installation!\e[0m"
 else
 echo "postfix postfix/mailname string $srvname" | debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
@@ -48,7 +47,7 @@ EOF
 chmod +x /root/scripts/notify.sh
 
 echo "\e[34m --------------------------------------\e[0m"
-echo "\e[32m Creating cron task - /root/scripts/notify.sh!\e[0m"
+echo "\e[32m Creating cron task '/etc/cron.d/notify'!\e[0m"
 echo "* * * * * root /bin/sh /root/scripts/notify.sh" > /etc/cron.d/notify
 
 echo "\e[31m#----------------------------------------------------------------#\e[0m"
