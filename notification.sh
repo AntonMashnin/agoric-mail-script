@@ -1,15 +1,18 @@
 #!/bin/sh
-chkpackage=`dpkg --get-selections | grep mailutils | awk {'print $1'} | egrep -v "libmailutils|common"`;
+#chkpackage=`dpkg --get-selections | grep mailutils | awk {'print $1'} | egrep -v "libmailutils|common"`;
+chkpackage=`dpkg-query -W -f='${Status} ${Version}\n' mailutils | awk {'print $2'}`
 srvname=`uname -n`;
 
-if echo "$chkpackage" == 1 >> /dev/null; then
-#	echo "Package mailutils has already installed"
+if [ "$chkpackage" = "ok" ]; then
 	echo "\e[32m The \"Mailutils\" package has already installed\e[0m"
 	echo "\e[32m Skip installation!\e[0m"
 else
 echo "postfix postfix/mailname string $srvname" | debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
-sudo apt install mailutils -y
+sudo apt install mailutils -y >> /dev/null
+
+echo "\e[32m The \"Mailutils\" package has been installed successfully\e[0m"
+echo "\e[32m Skip installation!\e[0m"
 fi
 
 echo "\e[34m --------------------------------------\e[0m"
